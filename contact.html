@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Store Locator</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+     crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    .logo{
+  
+      padding: 15px 20px;   
+      justify-content: space-evenly;
+      text-align: center;
+      color: navy;
+      display: flex;
+      flex-wrap: wrap;
+                
+            }
+        
+       header {
+        
+  position: sticky;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  background:white;
+  padding: 15px 20px;
+}
+
+
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 20px;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: black;
+  text-decoration: none;
+  padding: 15px 20px;
+  transition: background 0.3s;
+  
+}
+
+nav ul li a:hover {
+  background:yellow;
+  border-radius: 5px;
+}
+        .add{
+            border: 2px;
+            padding:8px;
+            background-color: navy;
+            color: aliceblue;
+            justify-content: space-evenly;
+            text-align:center;
+        }
+    .locator-container {
+      display: flex;
+      height: 500px;
+    }
+
+    .sidebar {
+      width: 20%;
+      background: #fff;
+      border-right: 1px solid #ddd;
+      padding: 20px;
+      overflow-y: auto;
+    }
+
+    .sidebar h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .search-box {
+      display: flex;
+      margin-bottom: 20px;
+    }
+
+    .search-box input {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px 0 0 4px;
+      outline: none;
+    }
+
+    .search-box button {
+      padding: 10px 20px;
+      border: none;
+      background: #000;
+      color: #fff;
+      border-radius: 0 4px 4px 0;
+      cursor: pointer;
+    }
+
+    .store {
+      padding: 15px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .store h3 {
+      font-size: 16px;
+      color: #0073e6;
+      margin-bottom: 5px;
+    }
+
+    .store p {
+      font-size: 14px;
+      color: #555;
+    }
+
+    .map {
+      width: 70%;
+      height: 100%;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    .f1{
+            border:2px;
+            padding:10px;
+            margin:5px;
+            width:1500px;
+            background-color: rgb(25, 100, 171);
+            color: aliceblue;
+            text-align: center;
+            display:inline-block;
+            flex-wrap: wrap;
+            justify-content:center;
+            height: 80px;     
+       }
+      .f2{
+           border:2px;
+            padding:10px;
+            margin:5px;
+            width:1500px;
+            background-color:wheat;
+            color: black;
+            text-align: center;
+            display:inline-block;
+            flex-wrap: wrap;
+            justify-content:space-evenly;
+            height: 150px;     
+      }
+      #navbar{
+        
+            text-align: center;
+            display:inline-block;
+            flex-wrap: wrap;
+            justify-content:space-evenly;
+            height: 150px;    
+      }
+      .f3{
+            border:1px;
+            padding: 15px;
+            margin:5px;
+            height: 100px;
+            width:350px;
+            text-align: center;
+            display:inline-block;
+            flex-wrap: wrap;
+            justify-content:space-evenly; 
+      }
+      .f4{
+           border:1px;
+            padding: 15px;
+            margin:5px;
+            text-align: left;
+      }
+     @media (max-width: 1024px) {
+      nav ul li a {
+        font-size: 16px;
+        padding: 8px;
+      }
+      .locator-container {
+        flex-direction: column;
+      }
+      .sidebar {
+        max-width: 100%;
+        height: auto;
+      }
+      .map {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  
+
+  <section>
+     <header>
+     <div>
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <i class="fa-solid fa-location-dot"></i>
+        <i class="fa-solid fa-user"></i>
+        <i class="fa-solid fa-heart"></i>
+        <i class="fa-solid fa-cart-shopping"></i>
+     </div>
+        
+     
+    <h1 class="logo">BIRKENSTOCK</h1>
+    <nav>
+      <ul>
+        <li><a href="HOME.html">Home</a></li>
+        <li><a href="womens.html">womens</a></li>
+        <li><a href="men.html">men</a></li>
+        <li><a href="kids.html">kids</a></li>
+        <li><a href="shoe_care.html">shoe_care</a></li>
+         <li><a href="contact.html">contact</a></li>
+        
+      </ul>
+    </nav>
+  </header>
+      <main>
+           
+            <div class="add"><h5>Signup & get Rs. 500 off on your first purchase. T&C Apply</h5></div>
+            
+          </section> 
+
+  <div class="locator-container">
+    <!-- Left Sidebar -->
+    <div class="sidebar">
+      <h2>Find stores near this location</h2>
+      <div class="search-box">
+        <input type="text" placeholder="Postal/Zip Code">
+        <button>Search</button>
+      </div>
+
+      <div class="store">
+        <h3>BIRKENSTOCK Store, DB Mall, Bhopal</h3>
+        <p>G-62, Ground Floor, Dainik Bhaskar Mall, DB City Mall, Zone-I, Maharana Pratap Nagar, Bhopal, Madhya Pradesh 462016, India</p>
+      </div>
+
+      <div class="store">
+        <h3>BIRKENSTOCK Brand Store, Phoenix Palassio</h3>
+        <p>G-40, Ground Floor, Phoenix Palassio Mall, Amar Shaheed Path Sector 7, Gomti Nagar Extension, Lucknow, Uttar Pradesh 226010, India</p>
+      </div>
+
+      <div class="store">
+        <h3>BIRKENSTOCK Brand Store, Phoenix Citadel, Indore</h3>
+        <p>Phoenix Citadel, Indore, Upper Ground Floor, Village Khajrana, Tehsil & District Indore</p>
+      </div>
+    </div>
+
+    <!-- Right Map -->
+    <div class="map">
+      <iframe src="https://www.google.com/maps/embed?pb=!4v169635135!5m2!1sen!2sin" ></iframe>
+    </div>
+  </div>
+<footer>
+                <section id="footer">
+                    <div class="f1">
+                        <div class=""><img src="img55.webp" height="45px" width="50px" alt=""></div>
+                        <div class=""><h5>Tradition since 1774</h5></div>
+                    </div>
+                    <div class="f2">
+                        <div class=""><img src= "https://cdn-icons-png.flaticon.com/128/2482/2482331.png" height="30px" width="30px" alt=""></div>
+                        <div class=""><h3>SOCIAL MEDIA</h3></div>
+                        <div class="">Follow Birkenstock on Social Web:</div>
+                    <div id="navbar">
+                      <nav>
+                          <a href=""><img src="img39.webp" height="30px" width="30px" alt=""></a>
+                          <a href=""><img src="img40.webp" height="30px" width="30px" alt=""></a>
+                          <a href=""><img src="img45.png" height="50px" width="50x" alt=""></a>
+                      </nav>
+                    </div>
+                    </div>
+                    <div>
+                        <div class="f3">
+                            <div class=""><h3>LOGIN/REGISTER</h3></div>
+                            <div class="">
+                                <a href="login.html">Login/Register</a><br>
+                                <a href="profile.html">My profile</a><br>
+                                <a href="track.html">Track order</a><br>
+                                <a href="order.html">My Order</a><br>
+                                <a href="return.html">Return or Replace order</a><br>
+                                <a href="address.httml">Address Book</a>     
+                            </div>
+                        </div>
+                        <div class="f3">
+                            <div class=""><h3>Top Styles</h3></div>
+                            <div class="">
+                                <a href="Gizeh.html">Gizeh</a><br>
+                                <a href="arizona.html">Arizona</a><br>
+                                <a href="madrid.html">Madrid</a><br>
+                                <a href="mayari.html">Mayari</a><br>
+                                
+                            </div>
+                        </div>
+                        <div class="f3">
+                            <div class="text"><h3>Things To Know</h3></div>
+                            <div>
+                                <a href="material.html">Materials</a><br>
+                                <a href="footbed.html">Footbed</a><br>
+                                <a href="sustainibility.html">Sustainability</a><br>
+                                <a href="fit guide.html">Fit Guide</a><br>
+                                <a href="blog.html">Our Blog</a><br>
+                                <a href="safety.html">COVID-19 Safety Measures</a><br>
+                                
+                            </div>
+                        </div>
+                        <div class="f3">
+                            <div class="text"><h3>ABOUT BIRKENSTOCK</h3></div>
+                            <div>
+                                <a href="company.html">company</a><br>
+                                <a href="history.html">our History and Heritage</a><br>
+                                <a href="Brands.html">Our Brands</a><br>
+                                <a href="Responsibility.html">Responsibility</a><br>
+                                <a href="press.html">press</a><br>
+                                <a href="info.html">compliance information</a><br>
+                                
+                            </div>
+                        </div>
+                        <div class="f3">
+                            <div class="text"><h3>SERVICE & HELP</h3></div>
+                            <div>
+                                <a href="contact.html">contact</a><br>
+                                <a href="payment.html">payment method</a><br>
+                                <a href="shipping.html">shipping & delivery</a><br>
+                                <a href="return.html">Return and relacement policy</a><br>
+                                <a href="que.html">frequently asked questions(FAQ)</a><br>
+                                <a href="waranty.html">Warranty</a><br>
+                            </div>
+                        </div>
+                        <div class="f3">
+                            <div class="text"><h3>OFFERS T&C</h3></div>
+                            <div>
+                                 <a href="cost.html">No cost EMI-T&C</a><br>
+                                <a href="return.html">No returns-T&C</a><br>
+                                <a href="gift.html">Gift cards-T&C</a><br>
+                                <a href="CRED.html">CRED-T&C</a><br>
+                                <a href="walk.html">Walk Naturally-T&C</a><br>
+                            </div>
+                        </div>
+                        <div class="f3">
+                            <div class="text"><h3>LEGAL</h3></div>
+                            <div>
+                                <a href="terms.html">Termas of use</a><br>
+                                <a href="privacy.html">Privacy policy</a><br>
+                            </div>
+                        </div>
+                   </div>
+                   <div class="f4">
+                      <div class="text"><h6>© 2025 BIRKENSTOCK DIGITAL GMBH All rights reserved.</h6></div>
+                   </div>
+                  
+                </footer> 
+</body>
+</html>>
