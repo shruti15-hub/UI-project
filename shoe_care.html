@@ -1,20 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
-    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-     crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body>
-    <!DOCTYPE html>
-<html lang="en">
-<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Footwear for Women</title>
+  <title>Birkenstock</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
+  integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <style>
     * {
       margin: 0;
@@ -23,89 +15,89 @@
       font-family: Arial, sans-serif;
     }
 
-    
     body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background: #f9f9f9;
-  color: #333;
-}
-.logo{
-  
-      padding: 15px 20px;   
-      justify-content: space-evenly;
-      text-align: center;
+      background: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      background: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      z-index: 1000;
+      flex-wrap: wrap;
+    }
+
+    header .icons {
+      display: flex;
+      gap: 15px;
+      font-size: 20px;
+    }
+
+    .logo {
+      font-size: 28px;
       color: navy;
+      text-align: center;
+      flex: 1;
+    }
+
+    nav ul {
+      list-style: none;
       display: flex;
       flex-wrap: wrap;
-                
-            }
-        
-       header {
-        
-  position: sticky;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
-  background:white;
-  padding: 15px 20px;
-}
+      gap: 10px;
+    }
 
+    nav ul li a {
+      text-decoration: none;
+      color: #000;
+      padding: 8px 12px;
+      transition: 0.3s;
+    }
 
+    nav ul li a:hover {
+      background: yellow;
+      border-radius: 5px;
+    }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  font-size: 20px;
-}
+    /* Banner */
+    .add {
+      text-align: center;
+      background: navy;
+      color: #fff;
+      padding: 10px;
+      margin: 10px 0;
+      font-size: 14px;
+    }
 
-nav ul li {
-  margin-left: 20px;
-}
-
-nav ul li a {
-  color: black;
-  text-decoration: none;
-  padding: 15px 20px;
-  transition: background 0.3s;
-  
-}
-
-nav ul li a:hover {
-  background:yellow;
-  border-radius: 5px;
-}
-        .add{
-            border: 2px;
-            padding:8px;
-            background-color: navy;
-            color: aliceblue;
-            justify-content: space-evenly;
-            text-align:center;
-        }
-       
-
+    /* Container Layout */
     .container {
       display: flex;
+      gap: 20px;
       padding: 20px;
+      flex-wrap: wrap;
     }
 
     /* Sidebar */
     .sidebar {
-      flex: 1;
-      max-width: 250px;
-      border-right: 1px solid #ddd;
+      flex: 1 1 250px;
+      background: #fff;
       padding: 15px;
-      overflow:scroll;
+      border-radius: 5px;
+      overflow: auto;
     }
 
     .filter-section {
       margin-bottom: 20px;
     }
 
-    .filter-section h3 {
+    .filter-section h3, .filter-section h2 {
       margin-bottom: 10px;
       font-size: 16px;
     }
@@ -129,36 +121,30 @@ nav ul li a:hover {
       background: #ddd;
     }
 
-    /* Product Section */
+    /* Products */
     .products {
-      border:2px;
-            padding:10px;
-            margin:5px;
-            width:220px;
-            text-align: center;
-            display:inline-block;
-            flex-wrap: wrap;
-            justify-content:center;
-            height: 200px;  
+      flex: 3 1 600px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
     }
 
     .product-card {
-      width: 220px;
       border: 1px solid #ddd;
       border-radius: 10px;
-      overflow: hidden;
       text-align: center;
       padding: 15px;
+      background: #fff;
       transition: 0.3s;
     }
 
     .product-card:hover {
-      box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     }
 
     .product-card img {
       width: 100%;
-      height: 150px;
+      height: 160px;
       object-fit: contain;
     }
 
@@ -179,173 +165,130 @@ nav ul li a:hover {
 
     .product-card p {
       font-size: 14px;
-      margin: 5px 0;
       color: #444;
+      margin: 5px 0;
     }
 
     .product-card span {
       font-weight: bold;
       color: #000;
     }
-    
-    .f1{
-            border:2px;
-            padding:10px;
-            margin:5px;
-            width:1500px;
-            background-color: rgb(25, 100, 171);
-            color: aliceblue;
-            text-align: center;
-            display:inline-block;
-            flex-wrap: wrap;
-            justify-content:center;
-            height: 80px;     
-       }
-      .f2{
-           border:2px;
-            padding:10px;
-            margin:5px;
-            width:1500px;
-            background-color:wheat;
-            color: black;
-            text-align: center;
-            display:inline-block;
-            flex-wrap: wrap;
-            justify-content:space-evenly;
-            height: 150px;     
-      }
-      #navbar{
-        
-            text-align: center;
-            display:inline-block;
-            flex-wrap: wrap;
-            justify-content:space-evenly;
-            height: 150px;    
-      }
-      .f3{
-            border:1px;
-            padding: 15px;
-            margin:5px;
-            height: 100px;
-            width:350px;
-            text-align: center;
-            display:inline-block;
-            flex-wrap: wrap;
-            justify-content:space-evenly; 
-      }
-      .f4{
-           border:1px;
-            padding: 15px;
-            margin:5px;
-            text-align: left;
-      }
-      @media (max-width: 1000px) {
+
+    /* Footer */
+    footer {
+      background: #eee;
+      padding: 20px;
+      text-align: center;
+    }
+
+    footer h3 {
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+
+    footer a {
+      color: #333;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /*  Tablet View */
+    @media (max-width: 1024px) {
       .container {
         flex-direction: column;
+      }
+      nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
       }
       .sidebar {
         max-width: 100%;
       }
-      .products {
+    }
+
+    /*   Mobile View */
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .logo {
+        font-size: 22px;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+      }
+
+      .add {
+        font-size: 12px;
+        padding: 8px;
+      }
+
+      .filter-options {
         justify-content: center;
+      }
+
+      .products {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      }
+
+      .product-card img {
+        height: 130px;
+      }
+
+      footer {
+        font-size: 12px;
+        padding: 15px;
       }
     }
   </style>
 </head>
 <body>
-    
-  <section>
-     <header>
-      <div>
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <i class="fa-solid fa-location-dot"></i>
-        <i class="fa-solid fa-user"></i>
-        <i class="fa-solid fa-heart"></i>
-        <i class="fa-solid fa-cart-shopping"></i>
-      </div>
-        
-     
+
+  <header>
+    <div class="icons">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <i class="fa-solid fa-location-dot"></i>
+      <i class="fa-solid fa-user"></i>
+      <i class="fa-solid fa-heart"></i>
+      <i class="fa-solid fa-cart-shopping"></i>
+    </div>
     <h1 class="logo">BIRKENSTOCK</h1>
     <nav>
       <ul>
-        <li><a href="HOME.html">Home</a></li>
+       <li><a href="index.html">Home</a></li>
         <li><a href="womens.html">womens</a></li>
         <li><a href="men.html">men</a></li>
         <li><a href="kids.html">kids</a></li>
         <li><a href="shoe_care.html">shoe_care</a></li>
-         <li><a href="contact.html">contact</a></li>
-        
+        <li><a href="contact.html">contact</a></li>
       </ul>
     </nav>
   </header>
-  <main>
-           
-            <div class="add"><h5>Signup & get Rs. 500 off on your first purchase. T&C Apply</h5></div>
-            
-          </section> 
 
-  <section class="body">
-                <div class="subbody">
-                    <div class="img"><img src="s2.jpeg" alt=""></div>
-                 
-                </section>
-  <header>
-    <h1>FOOTWEAR FOR WOMEN COLLECTION</h1>
-  </header>
+  <div class="add">
+    <h5>Signup & get Rs. 500 off on your first purchase. T&C Apply</h5>
+  </div>
 
   <div class="container">
-    <!-- Sidebar -->
     <aside class="sidebar">
       <div class="filter-section">
         <h3>UPPER MATERIAL</h3>
         <div class="filter-options">
-          <button>Birko-Flor</button>
-          <button>Birko-Flor Birkibuc</button>
+          <button>Leather</button>
           <button>EVA</button>
-          <button>Leather/Textile</button>
-          <button>Natural Leather</button>
-          <button>Nubuk Leather</button>
           <button>Birko-Flor</button>
-          <button>Birko-Flor Birkibuc</button>
-          <button>EVA</button>
         </div>
-      </div>
-
-      <div class="filter-section">
-        <h3>COLOR</h3>
-        <div class="filter-options">
-          <button>Black</button>
-          <button>White</button>
-          <button>Pink</button>
-          <button>Beige</button>
-          <button>blue</button>
-          <button>purple</button>
-          <button>pink</button>
-          <button>yellow</button>
-          <button>orange</button>
-          <button>Black</button>
-          <button>White</button>
-          <button>Pink</button>
-          <button>Beige</button>
-        </div>
-      </div>
-      <div class="filter-section">
-         <h3>Availability</h3>
-          <div class="filter-options">  
-         <input type="checkbox" id="inStock">
-         <label for="inStock">In Stock</label>
-          </div>
-      </div>
-      <div class="filter-section">
-      <h2>Type</h2>
-      <div class="filter-options">
-        <button class="option">Back Strap</button>
-        <button class="option">Beach Sandals</button>
-        <button class="option">Boots</button>
-        <button class="option">Clog</button>
-      </div>
-    </div>
-    div class="section">
+        <div class="section">
       <h2>Size (EU)</h2>
       <div class="sizes">
        
@@ -405,70 +348,18 @@ nav ul li a:hover {
       <input type="radio" id="regular" name="width">
       <label for="regular">Regular</label>
     </div>
-  
- <div class="section">
-      <h2>Foot Width</h2>
-      <div class="options">
-        <button class="option">Narrow</button>
-        <button class="option selected">Regular</button>
-      </div>
     </div>
     </aside>
 
-    <!-- Products Section -->
     <section class="products">
       <div class="product-card">
         <span class="badge">NEW</span>
-        <span class="badge">BEST SELLERS</span>
-        <img src= "k1.webp">
+        <img src="k1.webp" alt="Arizona Big Buckle">
         <h4>Arizona Big Buckle</h4>
         <p>Natural Leather Patent Pink</p>
         <span>₹13,990.00</span>
       </div>
-
-      <div class="product-card">
-        <span class="badge">NEW</span>
-        <span class="badge">BEST SELLERS</span>
-        <img src="k2.webp">
-        <h4>Florida Fresh</h4>
-        <p>Nubuk Leather Beige</p>
-        <span>₹11,990.00</span>
-      </div>
-    </section>
-
-  <section class="products">
-      <div class="product-card">
-        <span class="badge">NEW</span>
-        <span class="badge">BEST SELLERS</span>
-        <img src= "k3.webp"Arizona Sandal">
-        <h4>Arizona Big Buckle</h4>
-        <p>Natural Leather Patent Pink</p>
-        <span>₹13,990.00</span>
-      </div>
-
-      <div class="product-card">
-        <span class="badge">NEW</span>
-        <span class="badge">WATER FRIENDLY</span>
-        <img src="k4.webp" alt="Madrid Big Buckle">
-        <h4>Madrid Big Buckle</h4>
-        <p>EVA Pink</p>
-        <span>₹4,990.00</span>
-      </div>
-
-      
-</section>
-
-        <section class="products">
-        <div class="product-card">
-        <span class="badge">NEW</span>
-        <span class="badge">BEST SELLERS</span>
-        <img src= "k5.jpg"Arizona Sandal">
-        <h4>Arizona Big Buckle</h4>
-        <p>Natural Leather Patent Pink</p>
-        <span>₹13,990.00</span>
-      </div>
-
-       <div class="product-card">
+     <div class="product-card">
         <span class="badge">NEW</span>
         <span class="badge">WATER FRIENDLY</span>
         <img src="k1.webp" alt="Madrid Big Buckle">
@@ -476,35 +367,33 @@ nav ul li a:hover {
         <p>EVA Pink</p>
         <span>₹4,990.00</span>
       </div>
-        
-      </section>
-      
-      <section class="products">
-        <div class="product-card">
-        <span class="badge">NEW</span>
-        <span class="badge">BEST SELLERS</span>
-        <img src= "k3.webp"alt="Arizona Sandal">
-        <h4>Arizona Big Buckle</h4>
-        <p>Natural Leather Patent Pink</p>
-        <span>₹13,990.00</span>
+      <div class="product-card">
+        <span class="badge">BEST SELLER</span>
+        <img src="k2.webp" alt="Florida Fresh">
+        <h4>Florida Fresh</h4>
+        <p>Nubuk Leather Beige</p>
+        <span>₹11,990.00</span>
       </div>
-
       <div class="product-card">
         <span class="badge">NEW</span>
         <span class="badge">WATER FRIENDLY</span>
-
-        <img src="k5.jpg" alt="Madrid Big Buckle">
+        <img src="k1.webp" alt="Madrid Big Buckle">
         <h4>Madrid Big Buckle</h4>
         <p>EVA Pink</p>
         <span>₹4,990.00</span>
       </div>
-
-     
+      <div class="product-card">
+        <span class="badge">BEST SELLER</span>
+        <img src="k2.webp" alt="Florida Fresh">
+        <h4>Florida Fresh</h4>
+        <p>Nubuk Leather Beige</p>
+        <span>₹11,990.00</span>
+      </div>
+    </section>
   </div>
-</section>
-</div>
-<footer>
-                <section id="footer">
+
+  <footer>
+    <section id="footer">
                     <div class="f1">
                         <div class=""><img src="img55.webp" height="45px" width="50px" alt=""></div>
                         <div class=""><h5>Tradition since 1774</h5></div>
@@ -533,74 +422,9 @@ nav ul li a:hover {
                                 <a href="address.httml">Address Book</a>     
                             </div>
                         </div>
-                        <div class="f3">
-                            <div class=""><h3>Top Styles</h3></div>
-                            <div class="">
-                                <a href="Gizeh.html">Gizeh</a><br>
-                                <a href="arizona.html">Arizona</a><br>
-                                <a href="madrid.html">Madrid</a><br>
-                                <a href="mayari.html">Mayari</a><br>
-                                
-                            </div>
-                        </div>
-                        <div class="f3">
-                            <div class="text"><h3>Things To Know</h3></div>
-                            <div>
-                                <a href="material.html">Materials</a><br>
-                                <a href="footbed.html">Footbed</a><br>
-                                <a href="sustainibility.html">Sustainability</a><br>
-                                <a href="fit guide.html">Fit Guide</a><br>
-                                <a href="blog.html">Our Blog</a><br>
-                                <a href="safety.html">COVID-19 Safety Measures</a><br>
-                                
-                            </div>
-                        </div>
-                        <div class="f3">
-                            <div class="text"><h3>ABOUT BIRKENSTOCK</h3></div>
-                            <div>
-                                <a href="company.html">company</a><br>
-                                <a href="history.html">our History and Heritage</a><br>
-                                <a href="Brands.html">Our Brands</a><br>
-                                <a href="Responsibility.html">Responsibility</a><br>
-                                <a href="press.html">press</a><br>
-                                <a href="info.html">compliance information</a><br>
-                                
-                            </div>
-                        </div>
-                        <div class="f3">
-                            <div class="text"><h3>SERVICE & HELP</h3></div>
-                            <div>
-                                <a href="contact.html">contact</a><br>
-                                <a href="payment.html">payment method</a><br>
-                                <a href="shipping.html">shipping & delivery</a><br>
-                                <a href="return.html">Return and relacement policy</a><br>
-                                <a href="que.html">frequently asked questions(FAQ)</a><br>
-                                <a href="waranty.html">Warranty</a><br>
-                            </div>
-                        </div>
-                        <div class="f3">
-                            <div class="text"><h3>OFFERS T&C</h3></div>
-                            <div>
-                                 <a href="cost.html">No cost EMI-T&C</a><br>
-                                <a href="return.html">No returns-T&C</a><br>
-                                <a href="gift.html">Gift cards-T&C</a><br>
-                                <a href="CRED.html">CRED-T&C</a><br>
-                                <a href="walk.html">Walk Naturally-T&C</a><br>
-                            </div>
-                        </div>
-                        <div class="f3">
-                            <div class="text"><h3>LEGAL</h3></div>
-                            <div>
-                                <a href="terms.html">Termas of use</a><br>
-                                <a href="privacy.html">Privacy policy</a><br>
-                            </div>
-                        </div>
-                   </div>
-                   <div class="f4">
-                      <div class="text"><h6>© 2025 BIRKENSTOCK DIGITAL GMBH All rights reserved.</h6></div>
-                   </div>
-                  
-                </footer>  <!--end of footer-->>
-    
+    <h3>Follow Birkenstock</h3>
+    <p>© 2025 BIRKENSTOCK DIGITAL GMBH All rights reserved.</p>
+  </footer>
+
 </body>
 </html>

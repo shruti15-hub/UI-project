@@ -7,252 +7,306 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
     integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
      crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
-
-    
-     body {
+ <style>
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: Arial, sans-serif;
-  line-height: 1.6;
+}
+
+body {
   background: #f9f9f9;
   color: #333;
+  line-height: 1.6;
 }
-.logo{
-  
-      padding: 15px 20px;   
-      justify-content: space-evenly;
-      text-align: center;
-      color: navy;
-      display: flex;
-      flex-wrap: wrap;
-                
-            }
-        
-       header {
-        
+
+/* ===== HEADER ===== */
+header {
   position: sticky;
+  top: 0;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
-  background:white;
-  padding: 15px 20px;
+  flex-wrap: wrap;
+  background: #fff;
+  padding: 10px 20px;
+  z-index: 1000;
 }
 
+header div i {
+  margin: 0 5px;
+  cursor: pointer;
+  color: navy;
+}
 
+.logo {
+  color: navy;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  flex: 1;
+}
 
 nav ul {
   list-style: none;
   display: flex;
+  gap: 15px;
   flex-wrap: wrap;
-  font-size: 20px;
-}
-
-nav ul li {
-  margin-left: 20px;
 }
 
 nav ul li a {
   color: black;
   text-decoration: none;
-  padding: 15px 20px;
-  transition: background 0.3s;
-  
+  padding: 8px 12px;
+  transition: 0.3s;
 }
 
 nav ul li a:hover {
-  background:yellow;
+  background: yellow;
   border-radius: 5px;
 }
-        .add{
-            border: 2px;
-            padding:8px;
-            background-color: navy;
-            color: aliceblue;
-            justify-content: space-evenly;
-            text-align:center;
-        }
 
-    .container {
-      display: flex;
-      padding: 20px;
-    }
+/* ===== OFFER BAR ===== */
+.add {
+  padding: 10px;
+  background: navy;
+  color: white;
+  text-align: center;
+}
 
-    /* Sidebar */
-    .sidebar {
-      flex: 1;
-      max-width: 250px;
-      border-right: 1px solid #ddd;
-      padding: 15px;
-      overflow:scroll;
-    }
+/* ===== CONTAINER ===== */
+.container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
 
-    .filter-section {
-      margin-bottom: 20px;
-    }
+/* ===== SIDEBAR ===== */
+.sidebar {
+  flex: 1 1 250px;
+  max-width: 250px;
+  border-right: 1px solid #ddd;
+  padding: 15px;
+  background: #fff;
+}
 
-    .filter-section h3 {
-      margin-bottom: 10px;
-      font-size: 16px;
-    }
+.filter-section {
+  margin-bottom: 20px;
+}
 
-    .filter-options {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
+.filter-section h3 {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: navy;
+}
 
-    .filter-options button {
-      padding: 6px 12px;
-      border: 1px solid #aaa;
-      border-radius: 5px;
-      background: #f9f9f9;
-      cursor: pointer;
-      font-size: 14px;
-    }
+.filter-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
 
-    .filter-options button:hover {
-      background: #ddd;
-    }
+.filter-options button {
+  padding: 6px 12px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  background: #f9f9f9;
+  cursor: pointer;
+  font-size: 14px;
+}
 
-    /* Product Section */
-    .products {
-      border:2px;
-            padding:10px;
-            margin:5px;
-            width:250px;
-            text-align: center;
-            display:inline-block;
-            flex-wrap: wrap;
-            justify-content:center;
-            height: 200px;  
-    }
+.filter-options button:hover {
+  background: #ddd;
+}
 
-    .product-card {
-      width: 220px;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      overflow: hidden;
-      text-align: center;
-      padding: 15px;
-      transition: 0.3s;
-    }
+/* ===== PRODUCTS ===== */
+.products {
+  flex: 3;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
 
-    .product-card:hover {
-      box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
-    }
+.product-card {
+  width: 220px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: #fff;
+  text-align: center;
+  padding: 15px;
+  transition: 0.3s;
+}
 
-    .product-card img {
-      width: 100%;
-      height: 150px;
-      object-fit: contain;
-    }
+.product-card:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
 
-    .badge {
-      display: inline-block;
-      padding: 3px 6px;
-      font-size: 12px;
-      margin: 4px;
-      border-radius: 4px;
-      background: yellow;
-      color: #fff;
-    }
+.product-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+}
 
-    .product-card h4 {
-      margin: 10px 0;
-      font-size: 16px;
-    }
+.badge {
+  display: inline-block;
+  padding: 3px 6px;
+  font-size: 12px;
+  margin: 3px;
+  background: yellow;
+  border-radius: 4px;
+  color: black;
+  font-weight: bold;
+}
 
-    .product-card p {
-      font-size: 14px;
-      margin: 5px 0;
-      color: #444;
-    }
+/* ===== DESCRIPTION SECTION ===== */
+.container2 {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  background: #fff;
+}
 
-    .product-card span {
-      font-weight: bold;
-      color: #000;
-    }
-    
-    .container2 {
-        border:2px;
-      display: flex;
-      flex-wrap: wrap; 
-      justify-content: space-evenly;
-      align-items: center;
-      padding: 30px;
-      background-color:white;
-      height: 400px; }
+.container2 .text {
+  max-width: 900px;
+  text-align: left;
+  line-height: 1.8;
+}
 
-      #text{
-        text-align: bottom;
+/* ===== FOOTER ===== */
+footer {
+  background: #f1f1f1;
+  padding: 30px 15px;
+}
 
-      }
-      .f1{
-            border:2px;
-            padding:10px;
-            margin:5px;
-            width:1500px;
-            background-color: rgb(25, 100, 171);
-            color: aliceblue;
-            text-align: center;
-            display:inline-block;
-            flex-wrap: wrap;
-            justify-content:center;
-            height: 80px;     
-       }
-      .f2{
-           border:2px;
-            padding:10px;
-            margin:5px;
-            width:1500px;
-            background-color:wheat;
-            color: black;
-            text-align: center;
-            display:inline-block;
-            flex-wrap: wrap;
-            justify-content:space-evenly;
-            height: 150px;     
-      }
-      #navbar{
-        
-            text-align: center;
-            display:inline-block;
-            flex-wrap: wrap;
-            justify-content:space-evenly;
-            height: 150px;    
-      }
-      .f3{
-            border:1px;
-            padding: 15px;
-            margin:5px;
-            height: 100px;
-            width:350px;
-            text-align: center;
-            display:inline-block;
-            flex-wrap: wrap;
-            justify-content:space-evenly; 
-      }
-      .f4{
-           border:1px;
-            padding: 15px;
-            margin:5px;
-            text-align: left;
-      }
-      @media (max-width: 1200px) {
+footer section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+
+.f1, .f2, .f3, .f4 {
+  flex: 1 1 250px;
+  text-align: left;
+}
+
+.f3 a {
+  text-decoration: none;
+  color: #000;
+  display: block;
+  margin: 5px 0;
+  transition: color 0.3s;
+}
+
+.f3 a:hover {
+  color: navy;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  nav ul {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
   .container {
     flex-direction: column;
   }
+
   .sidebar {
     max-width: 100%;
+    border: none;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .product-card {
+    width: 45%;
+  }
+
+  footer section {
+    justify-content: center;
   }
 }
-  </style>
+
+/* Mobiles */
+@media (max-width: 768px) {
+  .logo {
+    font-size: 22px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 5px 0;
+  }
+
+  .product-card {
+    width: 80%;
+  }
+
+  .sidebar {
+    text-align: center;
+  }
+
+  .container2 .text {
+    padding: 10px;
+    text-align: justify;
+  }
+
+  footer section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .f3, .f2, .f1, .f4 {
+    flex: 1 1 100%;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  header {
+    flex-direction: column;
+    gap: 5px;
+    text-align: center;
+  }
+
+  nav ul {
+    font-size: 14px;
+  }
+
+  .product-card {
+    width: 100%;
+  }
+
+  .add {
+    font-size: 14px;
+  }
+
+  .container2 {
+    padding: 15px;
+  }
+
+  .container2 .text {
+    font-size: 14px;
+  }
+}
+
+</style>
 </head>
 <body>
   
@@ -270,7 +324,7 @@ nav ul li a:hover {
     <h1 class="logo">BIRKENSTOCK</h1>
     <nav>
       <ul>
-        <li><a href="HOME.html">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="womens.html">womens</a></li>
         <li><a href="men.html">men</a></li>
         <li><a href="kids.html">kids</a></li>
@@ -515,61 +569,7 @@ So what are you waiting for? Let your kids slip on a pair of Birkenstock sandals
                                 <a href="address.httml">Address Book</a>     
                             </div>
                         </div>
-                        <div class="f3">
-                            <div class=""><h3>Top Styles</h3></div>
-                            <div class="">
-                                <a href="Gizeh.html">Gizeh</a><br>
-                                <a href="arizona.html">Arizona</a><br>
-                                <a href="madrid.html">Madrid</a><br>
-                                <a href="mayari.html">Mayari</a><br>
-                                
-                            </div>
-                        </div>
-                        <div class="f3">
-                            <div class="text"><h3>Things To Know</h3></div>
-                            <div>
-                                <a href="material.html">Materials</a><br>
-                                <a href="footbed.html">Footbed</a><br>
-                                <a href="sustainibility.html">Sustainability</a><br>
-                                <a href="fit guide.html">Fit Guide</a><br>
-                                <a href="blog.html">Our Blog</a><br>
-                                <a href="safety.html">COVID-19 Safety Measures</a><br>
-                                
-                            </div>
-                        </div>
-                        <div class="f3">
-                            <div class="text"><h3>ABOUT BIRKENSTOCK</h3></div>
-                            <div>
-                                <a href="company.html">company</a><br>
-                                <a href="history.html">our History and Heritage</a><br>
-                                <a href="Brands.html">Our Brands</a><br>
-                                <a href="Responsibility.html">Responsibility</a><br>
-                                <a href="press.html">press</a><br>
-                                <a href="info.html">compliance information</a><br>
-                                
-                            </div>
-                        </div>
-                        <div class="f3">
-                            <div class="text"><h3>SERVICE & HELP</h3></div>
-                            <div>
-                                <a href="contact.html">contact</a><br>
-                                <a href="payment.html">payment method</a><br>
-                                <a href="shipping.html">shipping & delivery</a><br>
-                                <a href="return.html">Return and relacement policy</a><br>
-                                <a href="que.html">frequently asked questions(FAQ)</a><br>
-                                <a href="waranty.html">Warranty</a><br>
-                            </div>
-                        </div>
-                        <div class="f3">
-                            <div class="text"><h3>OFFERS T&C</h3></div>
-                            <div>
-                                 <a href="cost.html">No cost EMI-T&C</a><br>
-                                <a href="return.html">No returns-T&C</a><br>
-                                <a href="gift.html">Gift cards-T&C</a><br>
-                                <a href="CRED.html">CRED-T&C</a><br>
-                                <a href="walk.html">Walk Naturally-T&C</a><br>
-                            </div>
-                        </div>
+                        
                         <div class="f3">
                             <div class="text"><h3>LEGAL</h3></div>
                             <div>

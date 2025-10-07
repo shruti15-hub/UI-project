@@ -10,290 +10,251 @@
      
 
     <style>
-        *{
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-        }
-        
-        #container{
-            
-            display: flex;                                      
-            flex-wrap: wrap;
-            justify-content: space-evenly;
-            background-color: rgb(238, 233, 225);
-           
-            }
-            .logo{
-             
-                justify-content: center;
-                text-align: center;
-                color: navy;
-                display: inline-block;
-                flex-wrap: wrap;
-                
-            }
-        .logo1{
-            position:sticky;
-            top:0;
-            width:100%;
-            text-align: center;
-            color: navy;
-            background-color: white;
-            padding:15px 0;
-            z-index: 1000; 
-            justify-content:last baseline;  
-        }
-        header {
-        position: sticky;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        background:white;
-        padding: 15px 20px;
-    }
-
-        nav ul {
-          list-style: none;
-          display: flex;
-          flex-wrap: wrap;
-          font-size: 22px;
-        }
-
-    nav ul li {
-         margin-left: 20px;
-      }
-
-       nav ul li a {
-       color: black;
-       text-decoration: none;
-       padding: 8px 12px;
-       transition:  0.3s;
-  
+       * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
-      nav ul li a:hover {
-     background:yellow;
-     border-radius: 5px;
+body {
+  background: rgb(238, 233, 225);
+  color: #333;
+}
+.subbody {
+  width: 100%;
+  max-width: 1800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-        .add{
-            border: 2px;
-            padding:8px;
-            background-color: navy;
-            color: aliceblue;
-            justify-content: space-evenly;
-            text-align:center;
-        }
-       
-        .add2{
-            
-            top:0;
-            width:100%;
-            text-align: center;
-            color:black;
-            background-color: white;
-            padding:15px 0;
-            z-index: 1000; 
-            justify-content:last baseline;  
-            text-transform: uppercase;
-        }
-        .products{
-            border:2px;
-            padding:10px;
-            margin:5px;
-            width:220px;
-            text-align: center;
-            display:inline-block;
-            flex-wrap: wrap;
-            justify-content:center;
-            height: 200px;     
-        }
-       .add3{
-           
-            top:0;
-            width:100%;
-            text-align: center;
-            color:black;
-            background-color: white;
-            padding:15px 0;
-            z-index: 1000; 
-            justify-content:last baseline;  
-            text-transform: uppercase;
-       }
-       .inline{ 
-            border:2px;
-            padding:10px;
-            margin:5px;
-           
-            text-align: center;
-            display:inline-block;
-            flex-wrap: wrap;
-            justify-content:center;
-            height: 200px;   
-       }
-       .add4{
-           
-            top:0;
-            width:100%;
-            text-align: center;
-            color:black;
-            background-color: white;
-            padding:15px 0;
-            z-index: 1000; 
-            justify-content:last baseline;  
-            text-transform: uppercase;
 
-       }
-       .products2{
-            border:1px;
-            padding: 15px;
-            margin:5px;
-            width:350px;
-            text-align: center;
-            display:inline-block;
-            flex-wrap: wrap;
-            justify-content:center;    
-        }
-         
-       .container2 {
-      display: flex;
-      flex-wrap: wrap; 
-      justify-content: center;
-      align-items: center;
-      padding: 30px;
-      background-color:gray;
-      height: 400px; 
-      
-    }
+.img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 
-    .logo {
-      flex:250px;  
-      display: flex;
-      
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-    }
 
-    .logo img {
-      width: 150px;
-      height: 250px;
-     
-     
-    }
+.img img {
+  width: 100%;
+  max-width: 1800px; 
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
 
-    .text {
-      flex: 400px;
-      padding: 20px;
-      color: #333;
-    }
 
-    .text h2 {
-      font-size: 30px;
-      margin-bottom: 15px;
-      color: #000;
-    }
+header {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 15px 20px;
+  z-index: 1000;
+}
 
-    .text p {
-      font-size: 20px;
-    
-    }
-        .add5{
-             border: 2px;
-            padding:5px ;
-            color: black;
-            justify-content: space-evenly;
-            text-align:center;
-        }
-       .add6{
-         border:2px;
-            padding:10px;
-            margin:5px;
-            position:relative;
-            text-align: center;
-            display:inline-block;
-            flex-wrap: wrap;
-            justify-content:center;
-            height: 200px;   
+header .icons {
+  display: flex;
+  gap: 15px;
+  font-size: 20px;
+  color: navy;
+}
 
-       }
-       
-       .f1{
-            border:2px;
-            padding:10px;
-            margin:5px;
-            width:1500px;
-            background-color: rgb(25, 100, 171);
-            color: aliceblue;
-            text-align: center;
-            display:inline-block;
-            flex-wrap: wrap;
-            justify-content:center;
-            height: 80px;     
-       }
-      .f2{
-           border:2px;
-            padding:10px;
-            margin:5px;
-            width:1500px;
-            background-color:wheat;
-            color: black;
-            text-align: center;
-            display:inline-block;
-            flex-wrap: wrap;
-            justify-content:space-evenly;
-            height: 150px;     
-      }
-      #navbar{
-        
-            text-align: center;
-            display:inline-block;
-            flex-wrap: wrap;
-            justify-content:space-evenly;
-            height: 150px;    
-      }
-      .f3{
-            border:1px;
-            padding: 15px;
-            margin:5px;
-            height: 100px;
-            width:350px;
-            text-align: center;
-            display:inline-block;
-            flex-wrap: wrap;
-            justify-content:space-evenly; 
-      }
-      .f4{
-           border:1px;
-            padding: 15px;
-            margin:5px;
-            text-align: left;
-      }
-      @media screen and (min-width: 1024px) and (max-width: 1920px) {
-      header {
-        padding: 20px 80px;
-      }
+.logo {
+  font-size: 28px;
+  color: navy;
+  text-align: center;
+  flex: 1;
+}
 
-      nav ul li a {
-        font-size: 18px;
-      }
 
-      .product {
-        width: 240px;
-      }
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 15px;
+  flex-wrap: wrap;
+}
 
-      .trusted {
-        gap: 60px;
-      }
+nav ul li a {
+  text-decoration: none;
+  color: #000;
+  padding: 8px 12px;
+  transition: 0.3s;
+}
 
-      .footer-main {
-        justify-content: space-evenly;
-      }
-    }
+nav ul li a:hover {
+  background: yellow;
+  border-radius: 5px;
+}
 
-    
-        </style>
+
+.add {
+  text-align: center;
+  background: navy;
+  padding: 10px;
+  margin: 5px 0;
+  color: white;
+}
+
+.add2, .add3, .add4, .add5 {
+  text-align: center;
+  background: #fff;
+  padding: 10px;
+  margin: 5px 0;
+}
+
+
+.products, .products2, .inline, .add6 {
+  background: #fff;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  text-align: center;
+  flex: 1 1 250px;
+}
+
+.products img, .products2 img, .inline img, .add6 img {
+  width: 100%;
+  height: auto;
+  max-width: 250px;
+  object-fit: contain;
+}
+
+
+.products-wrapper, .products2-wrapper, .inline-wrapper, .add6-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+
+.container2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 15px;
+  background: gray;
+  color: #fff;
+}
+
+.container2 .logo, .container2 .text {
+  flex: 1 1 300px;
+  margin: 10px;
+}
+
+.container2 img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+}
+
+
+footer {
+  background: #eee;
+  padding: 20px 10px;
+  text-align: center;
+}
+
+footer section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+footer a {
+  text-decoration: none;
+  color: #000;
+}
+
+.f1, .f2, .f3, .f4 {
+  flex: 1 1 250px;
+  margin: 10px;
+}
+
+
+button {
+  background: navy;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: yellow;
+  color: #000;
+}
+
+
+
+/* Tablets */
+@media (max-width: 1024px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .products, .products2, .inline, .add6 {
+    flex: 1 1 45%;
+  }
+
+  .container2 {
+    flex-direction: column;
+  }
+}
+
+/* Mobiles */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .products, .products2, .inline, .add6 {
+    flex: 1 1 90%;
+    margin: 10px auto;
+  }
+
+  .container2 .logo, .container2 .text {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+
+  .logo {
+    font-size: 22px;
+  }
+
+  footer section {
+    flex-direction: column;
+  }
+
+  .f1, .f2, .f3, .f4 {
+    flex: 1 1 100%;
+  }
+}
+
+</style>
 
 </head>
 <body>
@@ -311,7 +272,7 @@
     <h1 class="logo">BIRKENSTOCK</h1>
     <nav>
       <ul>
-        <li><a href="HOME.html">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="womens.html">womens</a></li>
         <li><a href="men.html">men</a></li>
         <li><a href="kids.html">kids</a></li>
@@ -514,40 +475,7 @@
                                 <a href="address.httml">Address Book</a>     
                             </div>
                         </div>
-                        <div class="f3">
-                            <div class=""><h3>Top Styles</h3></div>
-                            <div class="">
-                                <a href="Gizeh.html">Gizeh</a><br>
-                                <a href="arizona.html">Arizona</a><br>
-                                <a href="madrid.html">Madrid</a><br>
-                                <a href="mayari.html">Mayari</a><br>
-                                
-                            </div>
-                        </div>
-                        <div class="f3">
-                            <div class="text"><h3>Things To Know</h3></div>
-                            <div>
-                                <a href="material.html">Materials</a><br>
-                                <a href="footbed.html">Footbed</a><br>
-                                <a href="sustainibility.html">Sustainability</a><br>
-                                <a href="fit guide.html">Fit Guide</a><br>
-                                <a href="blog.html">Our Blog</a><br>
-                                <a href="safety.html">COVID-19 Safety Measures</a><br>
-                                
-                            </div>
-                        </div>
-                        <div class="f3">
-                            <div class="text"><h3>ABOUT BIRKENSTOCK</h3></div>
-                            <div>
-                                <a href="company.html">company</a><br>
-                                <a href="history.html">our History and Heritage</a><br>
-                                <a href="Brands.html">Our Brands</a><br>
-                                <a href="Responsibility.html">Responsibility</a><br>
-                                <a href="press.html">press</a><br>
-                                <a href="info.html">compliance information</a><br>
-                                
-                            </div>
-                        </div>
+                        
                         <div class="f3">
                             <div class="text"><h3>SERVICE & HELP</h3></div>
                             <div>
@@ -569,13 +497,7 @@
                                 <a href="walk.html">Walk Naturally-T&C</a><br>
                             </div>
                         </div>
-                        <div class="f3">
-                            <div class="text"><h3>LEGAL</h3></div>
-                            <div>
-                                <a href="terms.html">Termas of use</a><br>
-                                <a href="privacy.html">Privacy policy</a><br>
-                            </div>
-                        </div>
+                        
                    </div>
                    <div class="f4">
                       <div class="text"><h6>© 2025 BIRKENSTOCK DIGITAL GMBH All rights reserved.</h6></div>

@@ -8,255 +8,214 @@
     integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
      crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
-    
-    body {
+       * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: Arial, sans-serif;
+}
+
+body {
   line-height: 1.6;
   background: #f9f9f9;
   color: #333;
 }
-.logo{
-  
-      padding: 15px 20px;   
-      justify-content: space-evenly;
-      text-align: center;
-      color: navy;
-      display: flex;
-      flex-wrap: wrap;
-                
-    }
-        
-       header {
-        
+
+header {
   position: sticky;
+  top: 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
-  background:white;
+  background: white;
   padding: 15px 20px;
+  z-index: 1000;
 }
 
-
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: navy;
+  text-align: center;
+}
 
 nav ul {
   list-style: none;
   display: flex;
+  gap: 20px;
   flex-wrap: wrap;
-  font-size: 20px;
-}
-
-nav ul li {
-  margin-left: 20px;
 }
 
 nav ul li a {
-  color: black;
   text-decoration: none;
-  padding: 15px 20px;
+  color: black;
+  padding: 10px 15px;
+  border-radius: 5px;
   transition: 0.3s;
-  
 }
 
 nav ul li a:hover {
-  background:yellow;
-  border-radius: 5px;
+  background: yellow;
 }
- .add{
-       border: 2px;
-       padding:8px;
-       background-color: navy;
-      color: aliceblue;
-      justify-content: space-evenly;
-      text-align:center;
-        }
 
-    .container {
-      display: flex;
-      padding: 20px;
-    }
+.add {
+  background: navy;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+}
 
-    /* Sidebar */
-    .sidebar {
-      flex: 1;
-      max-width: 250px;
-      border-right: 1px solid #ddd;
-      padding: 15px;
-      overflow:scroll;
-    }
+/* Container Layout */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 20px;
+  gap: 20px;
+}
 
-    .filter-section {
-      margin-bottom: 20px;
-    }
+.sidebar {
+  flex: 1;
+  max-width: 250px;
+  border-right: 1px solid #ddd;
+  padding: 15px;
+}
 
-    .filter-section h3 {
-      margin-bottom: 10px;
-      font-size: 16px;
-    }
+.products {
+  flex: 3;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
 
-    .filter-options {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
+.product-card {
+  width: 220px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  text-align: center;
+  padding: 15px;
+  background: white;
+  transition: 0.3s;
+}
 
-    .filter-options button {
-      padding: 6px 12px;
-      border: 1px solid #aaa;
-      border-radius: 5px;
-      background: #f9f9f9;
-      cursor: pointer;
-      font-size: 14px;
-    }
+.product-card:hover {
+  box-shadow: 0 4px 12px rgba(83, 245, 145, 0.2);
+}
 
-    .filter-options button:hover {
-      background: #ddd;
-    }
+.product-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+}
 
-    /* Product Section */
-    .products {
-      border:2px;
-            padding:10px;
-            margin:5px;
-            width:220px;
-            text-align: center;
-            display:inline-block;
-            flex-wrap: wrap;
-            justify-content:center;
-            height: 200px;  
-    }
+/* Footer */
+footer {
+  background: #fff;
+  padding: 30px 10px;
+}
 
-    .product-card {
-      width: 220px;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      overflow: hidden;
-      text-align: center;
-      padding: 15px;
-      transition: 0.3s;
-    }
+#footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 20px;
+}
 
-    .product-card:hover {
-      box-shadow: 0px 4px 12px rgba(83, 245, 145, 0.2);
-    }
+.f3 a {
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+}
 
-    .product-card img {
-      width: 100%;
-      height: 150px;
-      object-fit: contain;
-    }
+/* ================= Tablet View ================= */
+@media (max-width: 1024px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .badge {
-      display: inline-block;
-      padding: 3px 6px;
-      font-size: 12px;
-      margin: 4px;
-      border-radius: 4px;
-      background:pink;
-      color: #fff;
-    }
+  nav ul {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 
-    .product-card h4 {
-      margin: 10px 0;
-      font-size: 16px;
-    }
-
-    .product-card p {
-      font-size: 14px;
-      margin: 5px 0;
-      color: #444;
-    }
-
-    .product-card span {
-      font-weight: bold;
-      color: #000;
-    }
-    
-    .container2 {
-        border:2px;
-      display: flex;
-      flex-wrap: wrap; 
-      justify-content: space-evenly;
-      align-items: center;
-      padding: 30px;
-      background-color:white;
-      height: 400px; }
-
-      #text{
-        text-align: bottom;
-
-      }
-      .f1{
-            border:2px;
-            padding:10px;
-            margin:5px;
-            width:1500px;
-            background-color: rgb(25, 100, 171);
-            color: aliceblue;
-            text-align: center;
-            display:inline-block;
-            flex-wrap: wrap;
-            justify-content:center;
-            height: 80px;     
-       }
-      .f2{
-           border:2px;
-            padding:10px;
-            margin:5px;
-            width:1500px;
-            background-color:wheat;
-            color: black;
-            text-align: center;
-            display:inline-block;
-            flex-wrap: wrap;
-            justify-content:space-evenly;
-            height: 150px;     
-      }
-      #navbar{
-        
-            text-align: center;
-            display:inline-block;
-            flex-wrap: wrap;
-            justify-content:space-evenly;
-            height: 150px;    
-      }
-      .f3{
-            border:1px;
-            padding: 15px;
-            margin:5px;
-            height: 100px;
-            width:350px;
-            text-align: center;
-            display:inline-block;
-            flex-wrap: wrap;
-            justify-content:space-evenly; 
-      }
-      .f4{
-           border:1px;
-            padding: 15px;
-            margin:5px;
-            text-align: left;
-      }
-      @media (max-width: 1280px) {
   .container {
     flex-direction: column;
   }
 
   .sidebar {
     max-width: 100%;
-    order: 1;
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .product-card {
+    width: 45%;
+  }
+
+  #footer {
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+/* ================= Mobile View ================= */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+  }
+
+  .logo {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .container {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .sidebar {
+    border: none;
+  }
+
+  .product-card {
+    width: 100%;
   }
 
   .products {
-    order: 2;
+    gap: 15px;
+  }
+
+  #footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .f3 {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .f4 {
+    text-align: center;
   }
 }
+
+
+
+
   </style>
 </head>
 <body>
@@ -275,7 +234,7 @@ nav ul li a:hover {
     <h1 class="logo">BIRKENSTOCK</h1>
     <nav>
       <ul>
-        <li><a href="HOME.html">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="womens.html">womens</a></li>
         <li><a href="men.html">men</a></li>
         <li><a href="kids.html">kids</a></li>
@@ -291,12 +250,8 @@ nav ul li a:hover {
             
           </section> 
 
-  <section class="body">
-                <div class="subbody">
-                    <div class="img"><img src="Screenshot_4-10-2025_233258_www.birkenstock.in.jpeg" alt=""></div>
-                 
-                </section>
-  <header>
+  
+        <header>
     <h1>FOOTWEAR FOR WOMEN COLLECTION</h1>
   </header>
 
@@ -630,40 +585,7 @@ Match your shoes to the activity: casual clogs like Boston for indoors, durable 
                                 <a href="address.httml">Address Book</a>     
                             </div>
                         </div>
-                        <div class="f3">
-                            <div class=""><h3>Top Styles</h3></div>
-                            <div class="">
-                                <a href="Gizeh.html">Gizeh</a><br>
-                                <a href="arizona.html">Arizona</a><br>
-                                <a href="madrid.html">Madrid</a><br>
-                                <a href="mayari.html">Mayari</a><br>
-                                
-                            </div>
-                        </div>
-                        <div class="f3">
-                            <div class="text"><h3>Things To Know</h3></div>
-                            <div>
-                                <a href="material.html">Materials</a><br>
-                                <a href="footbed.html">Footbed</a><br>
-                                <a href="sustainibility.html">Sustainability</a><br>
-                                <a href="fit guide.html">Fit Guide</a><br>
-                                <a href="blog.html">Our Blog</a><br>
-                                <a href="safety.html">COVID-19 Safety Measures</a><br>
-                                
-                            </div>
-                        </div>
-                        <div class="f3">
-                            <div class="text"><h3>ABOUT BIRKENSTOCK</h3></div>
-                            <div>
-                                <a href="company.html">company</a><br>
-                                <a href="history.html">our History and Heritage</a><br>
-                                <a href="Brands.html">Our Brands</a><br>
-                                <a href="Responsibility.html">Responsibility</a><br>
-                                <a href="press.html">press</a><br>
-                                <a href="info.html">compliance information</a><br>
-                                
-                            </div>
-                        </div>
+                        
                         <div class="f3">
                             <div class="text"><h3>SERVICE & HELP</h3></div>
                             <div>
@@ -685,13 +607,7 @@ Match your shoes to the activity: casual clogs like Boston for indoors, durable 
                                 <a href="walk.html">Walk Naturally-T&C</a><br>
                             </div>
                         </div>
-                        <div class="f3">
-                            <div class="text"><h3>LEGAL</h3></div>
-                            <div>
-                                <a href="terms.html">Termas of use</a><br>
-                                <a href="privacy.html">Privacy policy</a><br>
-                            </div>
-                        </div>
+                        
                    </div>
                    <div class="f4">
                       <div class="text"><h6>© 2025 BIRKENSTOCK DIGITAL GMBH All rights reserved.</h6></div>
