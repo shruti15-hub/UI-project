@@ -129,7 +129,7 @@
       gap: 20px;
     }
 
-    .product-card {
+    .product-data {
       border: 1px solid #ddd;
       border-radius: 10px;
       text-align: center;
@@ -138,38 +138,38 @@
       transition: 0.3s;
     }
 
-    .product-card:hover {
+    .product-data:hover {
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     }
 
-    .product-card img {
+    .product-data img {
       width: 100%;
       height: 160px;
       object-fit: contain;
     }
 
-    .badge {
+    button {
       display: inline-block;
       padding: 3px 6px;
       font-size: 12px;
       margin: 4px;
       border-radius: 4px;
       background: plum;
-      color: #fff;
+      color:black;
     }
 
-    .product-card h4 {
+    .product-data h4 {
       margin: 10px 0;
       font-size: 16px;
     }
 
-    .product-card p {
+    .product-data p {
       font-size: 14px;
       color: #444;
       margin: 5px 0;
     }
 
-    .product-card span {
+    .product-data span {
       font-weight: bold;
       color: #000;
     }
@@ -241,7 +241,7 @@
         grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
       }
 
-      .product-card img {
+      .product-data img {
         height: 130px;
       }
 
@@ -292,7 +292,7 @@
       <h2>Size (EU)</h2>
       <div class="sizes">
        
-        <div class="size-grid">
+        <div class="size">
           
           <button class="size">30</button>
           <button class="size">31</button>
@@ -352,38 +352,36 @@
     </aside>
 
     <section class="products">
-      <div class="product-card">
-        <span class="badge">NEW</span>
+      <div class="product-data">
+        <button>NEW</button>
         <img src="k1.webp" alt="Arizona Big Buckle">
         <h4>Arizona Big Buckle</h4>
         <p>Natural Leather Patent Pink</p>
         <span>₹13,990.00</span>
       </div>
-     <div class="product-card">
-        <span class="badge">NEW</span>
-        <span class="badge">WATER FRIENDLY</span>
+     <div class="product-data">
+        <button>NEW</button>
         <img src="k1.webp" alt="Madrid Big Buckle">
         <h4>Madrid Big Buckle</h4>
         <p>EVA Pink</p>
         <span>₹4,990.00</span>
       </div>
-      <div class="product-card">
-        <span class="badge">BEST SELLER</span>
+     <div class="product-data">
+        <button>NEW</button>
         <img src="k2.webp" alt="Florida Fresh">
         <h4>Florida Fresh</h4>
         <p>Nubuk Leather Beige</p>
         <span>₹11,990.00</span>
       </div>
-      <div class="product-card">
-        <span class="badge">NEW</span>
-        <span class="badge">WATER FRIENDLY</span>
+      <div class="product-data">
+        <button>NEW</button>
         <img src="k1.webp" alt="Madrid Big Buckle">
         <h4>Madrid Big Buckle</h4>
         <p>EVA Pink</p>
         <span>₹4,990.00</span>
       </div>
-      <div class="product-card">
-        <span class="badge">BEST SELLER</span>
+      <div class="product-data">
+        <button>NEW</button>
         <img src="k2.webp" alt="Florida Fresh">
         <h4>Florida Fresh</h4>
         <p>Nubuk Leather Beige</p>
